@@ -117,41 +117,78 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named lora
+# Target rules for targets named tx
 
 # Build rule for target.
-lora: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 lora
-.PHONY : lora
+tx: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 tx
+.PHONY : tx
 
 # fast build rule for target.
-lora/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lora.dir/build.make CMakeFiles/lora.dir/build
-.PHONY : lora/fast
+tx/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/tx.dir/build.make CMakeFiles/tx.dir/build
+.PHONY : tx/fast
 
-src/main.o: src/main.cpp.o
-.PHONY : src/main.o
+#=============================================================================
+# Target rules for targets named rx
+
+# Build rule for target.
+rx: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 rx
+.PHONY : rx
+
+# fast build rule for target.
+rx/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/rx.dir/build.make CMakeFiles/rx.dir/build
+.PHONY : rx/fast
+
+src/rx.o: src/rx.cpp.o
+.PHONY : src/rx.o
 
 # target to build an object file
-src/main.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lora.dir/build.make CMakeFiles/lora.dir/src/main.cpp.o
-.PHONY : src/main.cpp.o
+src/rx.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/rx.dir/build.make CMakeFiles/rx.dir/src/rx.cpp.o
+.PHONY : src/rx.cpp.o
 
-src/main.i: src/main.cpp.i
-.PHONY : src/main.i
+src/rx.i: src/rx.cpp.i
+.PHONY : src/rx.i
 
 # target to preprocess a source file
-src/main.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lora.dir/build.make CMakeFiles/lora.dir/src/main.cpp.i
-.PHONY : src/main.cpp.i
+src/rx.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/rx.dir/build.make CMakeFiles/rx.dir/src/rx.cpp.i
+.PHONY : src/rx.cpp.i
 
-src/main.s: src/main.cpp.s
-.PHONY : src/main.s
+src/rx.s: src/rx.cpp.s
+.PHONY : src/rx.s
 
 # target to generate assembly for a file
-src/main.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lora.dir/build.make CMakeFiles/lora.dir/src/main.cpp.s
-.PHONY : src/main.cpp.s
+src/rx.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/rx.dir/build.make CMakeFiles/rx.dir/src/rx.cpp.s
+.PHONY : src/rx.cpp.s
+
+src/tx.o: src/tx.cpp.o
+.PHONY : src/tx.o
+
+# target to build an object file
+src/tx.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/tx.dir/build.make CMakeFiles/tx.dir/src/tx.cpp.o
+.PHONY : src/tx.cpp.o
+
+src/tx.i: src/tx.cpp.i
+.PHONY : src/tx.i
+
+# target to preprocess a source file
+src/tx.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/tx.dir/build.make CMakeFiles/tx.dir/src/tx.cpp.i
+.PHONY : src/tx.cpp.i
+
+src/tx.s: src/tx.cpp.s
+.PHONY : src/tx.s
+
+# target to generate assembly for a file
+src/tx.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/tx.dir/build.make CMakeFiles/tx.dir/src/tx.cpp.s
+.PHONY : src/tx.cpp.s
 
 # Help Target
 help:
@@ -161,10 +198,14 @@ help:
 	@echo "... depend"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
-	@echo "... lora"
-	@echo "... src/main.o"
-	@echo "... src/main.i"
-	@echo "... src/main.s"
+	@echo "... rx"
+	@echo "... tx"
+	@echo "... src/rx.o"
+	@echo "... src/rx.i"
+	@echo "... src/rx.s"
+	@echo "... src/tx.o"
+	@echo "... src/tx.i"
+	@echo "... src/tx.s"
 .PHONY : help
 
 

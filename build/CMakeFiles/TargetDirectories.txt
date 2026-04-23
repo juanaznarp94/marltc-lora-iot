@@ -1,3 +1,4 @@
-/home/dps/git/marltc-lora-iot/build/CMakeFiles/lora.dir
+/home/dps/git/marltc-lora-iot/build/CMakeFiles/tx.dir
+/home/dps/git/marltc-lora-iot/build/CMakeFiles/rx.dir
 /home/dps/git/marltc-lora-iot/build/CMakeFiles/edit_cache.dir
 /home/dps/git/marltc-lora-iot/build/CMakeFiles/rebuild_cache.dir
