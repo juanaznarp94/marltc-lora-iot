@@ -17,18 +17,18 @@ sudo nano /boot/firmware/config.txt
 ```
 
 ```bash
-    enable_uart=1
-    dtparam=uart0=on
-    dtoverlay=disable-bt
-    dtparam=spi=on
-    dtoverlay=spi0-0cs
+enable_uart=1
+dtparam=uart0=on
+dtoverlay=disable-bt
+dtparam=spi=on
+dtoverlay=spi0-0cs
 ```
 
 Enable Serial via raspi-config
 
 Run the configuration tool:
 ```Bash
-    sudo raspi-config
+sudo raspi-config
 ```
 Navigate to Interface Options > Serial Port.
 Login Shell? Select No.
@@ -43,9 +43,9 @@ Verification steps:
 # Build instructions (to e updated)
 
 ```bash
-    cd ~/git/marltc-lora-iot
-    mkdir -p build
-    cd build
-    cmake ..
-    make -j4
+cd ~/git/marltc-lora-iot
+mkdir -p build
+cd build
+cmake ..
+make -j4
 ```
